@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Настоящие Отношения — Ирина и Алексей Чижовы</title>
+<meta name="description" content="Настоящие Отношения — проект Ирины и Алексея Чижовых. Трансформационные программы. 10 000+ участников. Живой формат.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230e1e1e' stroke='%23c8a96e' stroke-width='1.5'/%3E%3Cpath d='M10 16 Q16 8 22 16 Q16 24 10 16Z' fill='none' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#080f0f;--bg2:#0c1818;--bg3:#112020;--card:rgba(200,169,110,.025);
+--gold:#c8a96e;--gl:#dfc89e;--gp:rgba(200,169,110,.06);--amber:#d4922a;
+--t:#e8e4dc;--t2:rgba(255,255,255,.6);--t3:rgba(255,255,255,.38);--t4:rgba(255,255,255,.2);
+--b:rgba(200,169,110,.08);--b2:rgba(200,169,110,.18);
+--r:14px;--rl:22px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--t);line-height:1.8;overflow-x:hidden;font-size:17px}
+h1,h2,h3,h4,h5{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.15}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(200,169,110,.3);color:#fff}
+img{max-width:100%;display:block}
+
+.cw{max-width:1100px;margin:0 auto;padding:0 28px}
+.cwn{max-width:800px;margin:0 auto;padding:0 28px}
+.s{padding:clamp(80px,12vw,140px) 0}
+.tc{text-align:center}
+.label{font-size:.56rem;letter-spacing:.35em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:10px}
+.st{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:16px}
+.ss{font-size:clamp(.92rem,1.6vw,1.05rem);color:var(--t2);line-height:1.9;max-width:640px}
+.gl{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),var(--amber));border-radius:2px;margin:20px 0 32px}
+.gl-c{margin-left:auto;margin-right:auto}
+.accent{color:var(--gold)}
+
+/* === ANIMATIONS (CINEMATIC) === */
+@keyframes heroReveal{0%{opacity:0;transform:translateY(60px) scale(.97)}100%{opacity:1;transform:none}}
+@keyframes heroGlow{0%,100%{opacity:.15}50%{opacity:.35}}
+@keyframes orbFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(15px,-20px)}50%{transform:translate(-10px,-35px)}75%{transform:translate(-20px,-10px)}}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(50px)}100%{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{0%{opacity:0;transform:translateX(-60px)}100%{opacity:1;transform:none}}
+@keyframes slideRight{0%{opacity:0;transform:translateX(60px)}100%{opacity:1;transform:none}}
+@keyframes pulseGold{0%,100%{box-shadow:0 0 0 0 rgba(200,169,110,.4)}70%{box-shadow:0 0 0 20px rgba(200,169,110,0)}}
+@keyframes drawPath{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+@keyframes rotateSlow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes breathe{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:.5;transform:scale(1.05)}}
+@keyframes typewriter{from{width:0}to{width:100%}}
+@keyframes blinkCaret{50%{border-color:transparent}}
+@keyframes countUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes shimmer{0%{background-position:-300% 0}100%{background-position:300% 0}}
+@keyframes parallax{0%{transform:translateY(0)}100%{transform:translateY(-60px)}}
+
+.rv{opacity:0;transform:translateY(44px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
+.rv.vis{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}.rv-d4{transition-delay:.48s}.rv-d5{transition-delay:.6s}
+.rv-sl{transform:translateX(-50px)}.rv-sl.vis{transform:none}
+.rv-sr{transform:translateX(50px)}.rv-sr.vis{transform:none}
+@media(prefers-reduced-motion:reduce){.rv,.rv-sl,.rv-sr{opacity:1;transform:none;transition:none}}
+
+/* === LOGO ICON (not star) === */
+.logo-icon{display:inline-block;vertical-align:middle}
+.logo-icon svg{width:28px;height:28px}
+
+/* === BUTTONS === */
+.btn{
+display:inline-flex;align-items:center;gap:10px;padding:20px 52px;
+background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg);
+font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+border-radius:100px;border:none;cursor:pointer;transition:all .4s;position:relative;overflow:hidden;
+}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--amber),var(--gold));opacity:0;transition:opacity .4s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(200,169,110,.25)}
+.btn:hover::after{opacity:1}
+.btn span{position:relative;z-index:1}
+.btn-pulse{animation:pulseGold 2.5s infinite}
+
+.btn-o{
+display:inline-flex;align-items:center;gap:8px;padding:16px 40px;
+border:1.5px solid rgba(200,169,110,.3);color:var(--gl);
+font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+border-radius:100px;cursor:pointer;background:transparent;transition:all .4s;
+}
+.btn-o:hover{border-color:var(--gold);background:var(--gp);transform:translateY(-2px)}
+
+/* ============================= */
+/* ========== NAV ============== */
+/* ============================= */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 0;transition:all .5s}
+.nav.scrolled{background:rgba(8,15,15,.92);backdrop-filter:blur(20px);padding:12px 0;border-bottom:1px solid var(--b)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 28px}
+.nav-brand{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gl);letter-spacing:.06em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{font-size:.7rem;color:var(--t3);letter-spacing:.04em;transition:color .3s}
+.nav-link:hover{color:var(--gold)}
+.nav-cta{padding:9px 28px;border:1px solid var(--b2);border-radius:100px;font-size:.68rem;color:var(--gl);letter-spacing:.08em;text-transform:uppercase;transition:all .3s}
+.nav-cta:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+
+/* ============================= */
+/* ========== HERO ============= */
+/* ============================= */
+.hero{
+min-height:100vh;display:flex;align-items:center;justify-content:center;
+position:relative;overflow:hidden;padding:100px 28px;
+}
+/* Cinematic gradient background */
+.hero-cinema{position:absolute;inset:0;z-index:0}
+.hero-cinema::before{
+content:'';position:absolute;inset:0;
+background:
+radial-gradient(ellipse 80% 60% at 25% 50%,rgba(200,169,110,.06),transparent),
+radial-gradient(ellipse 60% 80% at 75% 40%,rgba(74,106,90,.04),transparent),
+radial-gradient(ellipse at 50% 100%,rgba(200,169,110,.03),transparent);
+}
+/* Floating orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.orb-1{width:600px;height:600px;background:rgba(200,169,110,.04);top:-20%;left:-15%;animation:orbFloat 20s ease-in-out infinite}
+.orb-2{width:400px;height:400px;background:rgba(74,106,90,.04);bottom:-15%;right:-10%;animation:orbFloat 24s ease-in-out infinite 4s}
+.orb-3{width:300px;height:300px;background:rgba(200,169,110,.03);top:30%;right:5%;animation:orbFloat 18s ease-in-out infinite 8s}
+/* Particle lines */
+.hero-lines{position:absolute;inset:0;overflow:hidden;opacity:.15}
+.hero-line{position:absolute;width:1px;background:linear-gradient(180deg,transparent,var(--gold),transparent);animation:parallax 8s linear infinite}
+.hl1{height:200px;left:15%;top:-200px;animation-duration:12s}
+.hl2{height:150px;left:35%;top:-150px;animation-duration:16s;animation-delay:2s}
+.hl3{height:180px;left:55%;top:-180px;animation-duration:14s;animation-delay:5s}
+.hl4{height:220px;left:75%;top:-220px;animation-duration:18s;animation-delay:3s}
+.hl5{height:160px;left:90%;top:-160px;animation-duration:13s;animation-delay:7s}
+
+.hero-inner{position:relative;z-index:1;max-width:800px;text-align:center}
+.hero-badge{
+display:inline-flex;align-items:center;gap:10px;padding:10px 28px;
+border:1px solid rgba(200,169,110,.15);border-radius:100px;
+font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+font-weight:600;background:rgba(200,169,110,.03);backdrop-filter:blur(8px);
+margin-bottom:36px;animation:heroReveal 1.2s ease-out both;
+}
+.hero h1{
+font-size:clamp(2.6rem,6.5vw,4.8rem);font-weight:300;line-height:1.05;
+margin-bottom:24px;letter-spacing:-.02em;
+animation:heroReveal 1.4s ease-out .2s both;
+}
+.hero h1 em{font-style:italic;color:var(--gl);font-weight:400}
+.hero-tagline{
+font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2vw,1.25rem);
+font-style:italic;color:var(--t3);margin-bottom:48px;
+max-width:520px;margin-left:auto;margin-right:auto;line-height:1.8;
+animation:heroReveal 1.4s ease-out .4s both;
+}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:64px;animation:heroReveal 1.4s ease-out .6s both}
+.hero-stats{
+display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+padding-top:48px;border-top:1px solid rgba(255,255,255,.04);
+animation:heroReveal 1.4s ease-out .8s both;
+}
+.hs{text-align:center}
+.hs-n{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--t);line-height:1;margin-bottom:6px}
+.hs-l{font-size:.68rem;color:var(--t4);letter-spacing:.04em}
+
+/* ============================= */
+/* ====== TRUST BAR ============ */
+/* ============================= */
+.tbar{padding:20px 0;border-top:1px solid var(--b);border-bottom:1px solid var(--b);background:rgba(200,169,110,.01)}
+.tbar-items{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.tbar-i{
+display:inline-flex;align-items:center;gap:7px;padding:6px 16px;border-radius:100px;
+font-size:.64rem;color:var(--t3);letter-spacing:.03em;
+border:1px solid var(--b);
+}
+.tbar-i svg{width:14px;height:14px;flex-shrink:0}
+
+/* ============================= */
+/* ====== SECTION DIVIDERS ===== */
+/* ============================= */
+.dv{height:1px;background:linear-gradient(90deg,transparent 5%,var(--b) 50%,transparent 95%)}
+
+/* ============================= */
+/* ====== ABOUT SECTION ======== */
+/* ============================= */
+.about-text{font-size:1.15rem;color:var(--t2);line-height:2.1;margin-bottom:24px}
+.about-text strong{color:var(--gl);font-weight:600}
+.about-highlight{
+font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.8rem);
+font-style:italic;color:var(--gl);line-height:1.6;
+padding:32px 36px;margin:40px 0;
+border-left:3px solid var(--gold);background:var(--gp);
+border-radius:0 var(--r) var(--r) 0;
+}
+
+/* ============================= */
+/* ====== MISSION SVG ========== */
+/* ============================= */
+.mission-visual{max-width:560px;margin:48px auto}
+
+/* ============================= */
+/* ====== GRID LAYOUTS ========= */
+/* ============================= */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+
+/* ============================= */
+/* ====== CARDS ================ */
+/* ============================= */
+.card{
+padding:32px;border-radius:var(--rl);border:1px solid var(--b);
+background:var(--card);transition:all .5s cubic-bezier(.22,1,.36,1);
+}
+.card:hover{border-color:var(--b2);background:rgba(200,169,110,.04);transform:translateY(-6px)}
+.card-icon{margin-bottom:18px}
+.card h4{font-size:1.15rem;margin-bottom:8px;color:var(--t)}
+.card p{font-size:.92rem;color:var(--t2);line-height:1.8}
+
+/* ============================= */
+/* == LEADERS (DETAILED) ======= */
+/* ============================= */
+.leader-section{position:relative;overflow:hidden}
+.leader-block{
+padding:48px;border-radius:var(--rl);border:1px solid var(--b);
+background:var(--card);position:relative;overflow:hidden;
+}
+.leader-block::before{
+content:'';position:absolute;top:0;right:0;width:200px;height:200px;
+background:radial-gradient(circle,rgba(200,169,110,.04),transparent);
+border-radius:50%;
+}
+.leader-block h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:4px;color:var(--t)}
+.leader-role{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.05em;margin-bottom:20px;display:inline-block;padding:4px 16px;border:1px solid var(--b2);border-radius:100px}
+.leader-bio{font-size:1rem;color:var(--t2);line-height:2;margin-bottom:24px}
+.leader-bio strong{color:var(--gl)}
+.leader-stats{display:flex;gap:24px;flex-wrap:wrap}
+.leader-stat{
+padding:16px 24px;border-radius:var(--r);background:rgba(200,169,110,.04);
+border:1px solid var(--b);text-align:center;min-width:100px;
+}
+.leader-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--t);line-height:1}
+.leader-stat-label{font-size:.62rem;color:var(--t3);margin-top:4px}
+.leader-quote{
+font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;
+color:var(--gl);line-height:1.7;margin-top:24px;padding-left:20px;
+border-left:2px solid rgba(200,169,110,.3);
+}
+.leader-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.leader-tag{padding:4px 14px;border-radius:100px;font-size:.65rem;background:var(--gp);color:var(--gold);border:1px solid var(--b);font-weight:600}
+
+/* ============================= */
+/* ====== METHOD =============== */
+/* ============================= */
+.method-step{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--b)}
+.method-step:last-child{border-bottom:none}
+.method-num{
+font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;
+color:var(--gold);line-height:1;padding-top:4px;
+}
+.method-step h4{font-size:1.2rem;color:var(--t);margin-bottom:6px}
+.method-step p{font-size:.92rem;color:var(--t2);line-height:1.8}
+
+/* ============================= */
+/* ====== BIG NUMBERS ========== */
+/* ============================= */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:48px 0}
+.num{text-align:center;padding:36px 16px;border-radius:var(--r);background:var(--card);border:1px solid var(--b)}
+.num-v{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:500;color:var(--t);line-height:1;margin-bottom:8px}
+.num-l{font-size:.72rem;color:var(--t3);line-height:1.4}
+
+/* ============================= */
+/* ====== PROGRAMS ============= */
+/* ============================= */
+.prog{
+padding:36px 28px;border-radius:var(--rl);border:1px solid var(--b);
+background:var(--card);transition:all .5s;position:relative;
+}
+.prog:hover{border-color:var(--b2);transform:translateY(-5px)}
+.prog.feat{border-color:var(--gold);background:rgba(200,169,110,.05)}
+.prog-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.prog h3{font-size:1.35rem;color:var(--t);margin-bottom:4px}
+.prog-dur{font-size:.78rem;color:var(--t4);margin-bottom:16px}
+.prog ul{list-style:none;margin-bottom:20px}
+.prog ul li{padding:5px 0 5px 20px;position:relative;font-size:.88rem;color:var(--t2);line-height:1.7}
+.prog ul li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.75rem}
+.prog-price{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gl);font-weight:500}
+.prog-price small{font-size:.65rem;color:var(--t4);font-family:'Nunito Sans',sans-serif;display:block;margin-top:2px}
+
+/* ============================= */
+/* ====== TESTIMONIALS ========= */
+/* ============================= */
+.test{
+padding:32px 36px;border-radius:var(--rl);border:1px solid var(--b);
+background:var(--card);position:relative;margin-bottom:16px;
+}
+.test::before{
+content:'«';position:absolute;top:16px;left:24px;
+font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);opacity:.2;line-height:1;
+}
+.test-text{font-size:1rem;color:var(--t2);line-height:1.9;font-style:italic;padding-top:12px;margin-bottom:16px}
+.test-author{font-weight:700;font-size:.85rem;color:var(--t)}
+.test-role{font-size:.72rem;color:var(--t4)}
+.test-result{display:inline-block;margin-top:8px;padding:4px 14px;border-radius:100px;font-size:.65rem;background:rgba(39,174,96,.08);color:#4ade80;border:1px solid rgba(39,174,96,.12);font-weight:600}
+
+/* ============================= */
+/* ====== PROCESS ============== */
+/* ============================= */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.process-step{text-align:center;padding:28px 16px;position:relative}
+.process-num{
+width:56px;height:56px;border-radius:50%;margin:0 auto 18px;
+display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,var(--gold),var(--amber));
+font-weight:700;font-size:.9rem;color:var(--bg);
+}
+.process-step h4{font-size:1.05rem;margin-bottom:8px;color:var(--t)}
+.process-step p{font-size:.84rem;color:var(--t2);line-height:1.7}
+/* Arrow between steps */
+.process-step:not(:last-child)::after{
+content:'→';position:absolute;right:-14px;top:42px;
+font-size:1.2rem;color:var(--gold);opacity:.4;
+}
+
+/* ============================= */
+/* ====== FAQ ================== */
+/* ============================= */
+details.faq{border:1px solid var(--b);margin-bottom:8px;border-radius:var(--r);overflow:hidden;background:var(--card)}
+details.faq[open]{border-color:var(--b2)}
+details.faq summary{padding:20px 28px;cursor:pointer;font-size:.95rem;font-weight:500;color:var(--t);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:'+';font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);transition:transform .3s}
+details.faq[open] summary::after{transform:rotate(45deg)}
+.faq-body{padding:0 28px 22px;font-size:.92rem;color:var(--t2);line-height:1.9}
+
+/* ============================= */
+/* ====== FINAL CTA ============ */
+/* ============================= */
+.final{padding:clamp(100px,14vw,180px) 0;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,.04),transparent 60%);animation:breathe 8s ease-in-out infinite}
+.final h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:300;margin-bottom:16px}
+.final h2 em{font-style:italic;color:var(--gl)}
+.final-text{font-size:1.1rem;color:var(--t2);line-height:2;max-width:520px;margin:0 auto 44px}
+.final-ps{margin-top:24px;font-size:.86rem;color:var(--t4);font-style:italic}
+
+/* ============================= */
+/* ====== FOOTER =============== */
+/* ============================= */
+footer{padding:56px 0;border-top:1px solid var(--b)}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:24px}
+.footer-brand{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gl);letter-spacing:.06em}
+.footer-socials{display:flex;gap:14px}
+.footer-social{
+width:48px;height:48px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+border:1px solid var(--b2);background:var(--card);
+transition:all .4s;
+}
+.footer-social:hover{background:var(--gold);border-color:var(--gold)}
+.footer-social svg{width:20px;height:20px;transition:all .3s}
+.footer-social:hover svg{stroke:var(--bg)!important;fill:var(--bg)!important}
+.footer-legal{font-size:.6rem;color:var(--t4);line-height:1.9;text-align:center}
+.footer-legal a{text-decoration:underline;transition:color .3s}
+.footer-legal a:hover{color:var(--gold)}
+
+/* ============================= */
+/* ====== VENUE BLOCK ========== */
+/* ============================= */
+.venue-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.venue-feat{
+text-align:center;padding:32px 20px;border-radius:var(--rl);
+border:1px solid var(--b);background:var(--card);
+transition:all .5s;
+}
+.venue-feat:hover{border-color:var(--b2);transform:translateY(-4px)}
+.venue-feat svg{margin:0 auto 16px}
+.venue-feat h4{font-size:1.05rem;margin-bottom:6px;color:var(--t)}
+.venue-feat p{font-size:.84rem;color:var(--t2);line-height:1.7}
+
+/* ============================= */
+/* ====== GALLERY ============== */
+/* ============================= */
+.gallery-track{
+display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;padding:20px 0;
+scrollbar-width:none;
+}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-item{
+flex:0 0 340px;scroll-snap-align:center;
+border-radius:var(--rl);overflow:hidden;position:relative;
+border:1px solid var(--b);transition:all .6s cubic-bezier(.22,1,.36,1);
+}
+.gallery-item:hover{transform:scale(1.03);border-color:var(--b2);box-shadow:0 20px 60px rgba(200,169,110,.1)}
+.gallery-item img{width:100%;height:260px;object-fit:cover;display:block;filter:brightness(.9);transition:filter .5s}
+.gallery-item:hover img{filter:brightness(1)}
+.gallery-caption{
+position:absolute;bottom:0;left:0;right:0;padding:16px 20px;
+background:linear-gradient(transparent,rgba(8,15,15,.85));
+font-size:.76rem;color:var(--t3);
+}
+.gallery-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+.gallery-dot{width:8px;height:8px;border-radius:50%;background:var(--b);cursor:pointer;transition:all .3s}
+.gallery-dot.active{background:var(--gold);transform:scale(1.3)}
+
+/* Auto-scroll animation */
+@keyframes scrollGallery{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+.gallery-auto{
+display:flex;gap:16px;animation:scrollGallery 40s linear infinite;
+width:max-content;
+}
+.gallery-auto:hover{animation-play-state:paused}
+
+/* ============================= */
+/* == CINEMATIC HERO PARTICLES = */
+/* ============================= */
+.particles-canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
+
+/* ============================= */
+/* === TEXT REVEAL ANIMATION === */
+/* ============================= */
+.text-reveal{
+overflow:hidden;display:inline-block;
+}
+.text-reveal-inner{
+display:inline-block;
+transform:translateY(110%);
+transition:transform 1s cubic-bezier(.22,1,.36,1);
+}
+.text-reveal.vis .text-reveal-inner{transform:translateY(0)}
+
+/* ============================= */
+/* == COUNTER ANIMATION ======= */
+/* ============================= */
+.counter-animate{
+opacity:0;transform:translateY(20px);
+transition:all .8s cubic-bezier(.22,1,.36,1);
+}
+.counter-animate.vis{opacity:1;transform:none}
+
+/* ============================= */
+/* == MAGNETIC HOVER CARDS ===== */
+/* ============================= */
+.mag-card{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+
+/* ============================= */
+/* == GLOW SCROLL INDICATOR ==== */
+/* ============================= */
+.scroll-progress{
+position:fixed;top:0;left:0;height:2px;z-index:300;
+background:linear-gradient(90deg,var(--gold),var(--amber));
+width:0;transition:width .1s linear;
+}
+
+/* === STICKY MOBILE === */
+.sticky{position:fixed;bottom:0;left:0;right:0;padding:12px 20px;background:rgba(8,15,15,.95);backdrop-filter:blur(16px);box-shadow:0 -4px 28px rgba(0,0,0,.4);z-index:100;display:none;text-align:center;border-top:1px solid var(--b)}
+.sticky .btn{width:100%;justify-content:center;padding:16px 32px;font-size:.74rem}
+
+/* === RESPONSIVE === */
+@media(max-width:968px){
+.g2{grid-template-columns:1fr}
+.hero-stats{grid-template-columns:repeat(2,1fr)}
+.process-step::after{display:none}
+.process-grid{grid-template-columns:1fr 1fr}
+.nav-links{display:none}
+}
+@media(max-width:640px){
+.g3,.process-grid{grid-template-columns:1fr}
+.nums{grid-template-columns:1fr 1fr}
+.hero h1{font-size:2.2rem}
+.hero-stats{grid-template-columns:1fr 1fr}
+.sticky{display:block}
+body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a href="#top" class="nav-brand">
+<span class="logo-icon"><svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="16" r="14" stroke="#c8a96e" stroke-width="1.2"/><path d="M10 16 Q16 7 22 16 Q16 25 10 16Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="16" cy="16" r="2.5" fill="#c8a96e" opacity=".4"/></svg></span>
+Настоящие Отношения
+</a>
+<div class="nav-links">
+<a href="#about" class="nav-link">О проекте</a>
+<a href="#leaders" class="nav-link">Ведущие</a>
+<a href="#programs" class="nav-link">Программы</a>
+<a href="#reviews" class="nav-link">Отзывы</a>
+</div>
+<a href="#final" class="nav-cta">Записаться</a>
+</div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+<div class="hero-cinema">
+<canvas class="particles-canvas" id="particles"></canvas>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="hero-lines">
+<div class="hero-line hl1"></div>
+<div class="hero-line hl2"></div>
+<div class="hero-line hl3"></div>
+<div class="hero-line hl4"></div>
+<div class="hero-line hl5"></div>
+</div>
+</div>
+<div class="hero-inner">
+<div class="hero-badge">
+<svg viewBox="0 0 32 32" fill="none" width="16" height="16"><path d="M10 16 Q16 7 22 16 Q16 25 10 16Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/></svg>
+Проект Ирины и Алексея Чижовых
+</div>
+<h1>Настоящие<br><em>Отношения</em></h1>
+<p class="hero-tagline">Зрелые отношения без манипуляций.<br>Честный контакт с&nbsp;собой, друг с&nbsp;другом и&nbsp;с&nbsp;реальностью.</p>
+<div class="hero-btns">
+<a href="#final" class="btn"><span>Записаться на консультацию</span></a>
+<a href="#about" class="btn-o">Узнать подробнее</a>
+</div>
+<div class="hero-stats">
+<div class="hs"><div class="hs-n">10 000+</div><div class="hs-l">участников</div></div>
+<div class="hs"><div class="hs-n">25+</div><div class="hs-l">лет практики</div></div>
+<div class="hs"><div class="hs-n">3</div><div class="hs-l">модуля программы</div></div>
+<div class="hs"><div class="hs-n">Живой</div><div class="hs-l">формат · Москва · Сочи</div></div>
+</div>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="tbar">
+<div class="cw">
+<div class="tbar-items">
+<div class="tbar-i"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Сертифицированные специалисты</div>
+<div class="tbar-i"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>ICF стандарты коучинга</div>
+<div class="tbar-i"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>Психодрама · Групповая динамика</div>
+<div class="tbar-i"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Работа с парами и группами</div>
+</div>
+</div>
+</div>
+
+<div class="dv"></div>
+
+<!-- ===== ABOUT ===== -->
+<section class="s" id="about">
+<div class="cwn">
+<div class="label rv tc">О проекте</div>
+<h2 class="st rv tc">Не тренинг. Не терапия.<br><span class="accent">Пространство, где люди меняются.</span></h2>
+<div class="gl gl-c rv"></div>
+
+<p class="about-text rv">«Настоящие Отношения» — это проект глубокой трансформационной работы, который создали <strong>Ирина и Алексей Чижовы</strong> — семейная пара с суммарным опытом более 40 лет в работе с людьми.</p>
+
+<p class="about-text rv">Это не мотивационные семинары. Не «поговорить и разойтись». Это <strong>живая групповая работа</strong>, где люди проживают новый опыт — в контакте с собой и с другими. Через психодраму, групповую динамику и обратную связь.</p>
+
+<p class="about-text rv">Через программы проекта прошли <strong>более 10 000 человек</strong>. Предприниматели, руководители, врачи, IT-специалисты — люди, которые достигли многого снаружи, но чувствовали пустоту внутри.</p>
+
+<div class="about-highlight rv">
+Мы не «чиним» людей. Мы создаём пространство, в котором человек наконец может перестать притворяться — и начать жить по-настоящему.
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== MISSION / VALUES ===== -->
+<section class="s" style="background:var(--bg2)">
+<div class="cw">
+<div class="label rv tc">Принципы</div>
+<h2 class="st rv tc">Во что мы <span class="accent">верим</span></h2>
+<div class="gl gl-c rv"></div>
+
+<div class="g3" style="margin-top:48px">
+<div class="card rv">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><circle cx="24" cy="24" r="20" stroke="#c8a96e" stroke-width="1.2" stroke-dasharray="4 3"/><path d="M18 24 Q24 14 30 24 Q24 34 18 24Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/></svg></div>
+<h4>Честность важнее комфорта</h4>
+<p>Мы не гладим по голове. Мы говорим правду — потому что только через честность с собой начинаются реальные изменения.</p>
+</div>
+<div class="card rv rv-d1">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><circle cx="24" cy="16" r="8" stroke="#c8a96e" stroke-width="1.2"/><path d="M10 40 c0-8 6-14 14-14 s14 6 14 14" stroke="#c8a96e" stroke-width="1.2"/><circle cx="14" cy="28" r="4" stroke="#c8a96e" stroke-width=".8" opacity=".4"/><circle cx="34" cy="28" r="4" stroke="#c8a96e" stroke-width=".8" opacity=".4"/></svg></div>
+<h4>Отношения — лучшее зеркало</h4>
+<p>Все ваши паттерны видны в отношениях с людьми. Группа — идеальное пространство, чтобы увидеть себя и попробовать по-другому.</p>
+</div>
+<div class="card rv rv-d2">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><path d="M12 36 Q24 12 36 36" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="24" cy="20" r="6" stroke="#c8a96e" stroke-width="1.2"/><line x1="24" y1="26" x2="24" y2="36" stroke="#c8a96e" stroke-width="1.2"/></svg></div>
+<h4>Проживание, а не понимание</h4>
+<p>Знать и прожить — не одно и то же. Мы создаём опыт, который меняет не мысли, а поведение. Через тело, эмоции и живой контакт.</p>
+</div>
+</div>
+
+<div class="g3" style="margin-top:24px">
+<div class="card rv">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><rect x="8" y="8" width="32" height="32" rx="8" stroke="#c8a96e" stroke-width="1.2"/><path d="M16 24h16M24 16v16" stroke="#c8a96e" stroke-width="1" opacity=".3"/><path d="M18 18 l12 12 M30 18 l-12 12" stroke="#c8a96e" stroke-width="1.2"/></svg></div>
+<h4>Ответственность, не жертвенность</h4>
+<p>Мы не про «успешный успех» и не про «погладить по голове». Мы про то, чтобы перестать быть жертвой обстоятельств и начать создавать свою жизнь.</p>
+</div>
+<div class="card rv rv-d1">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><circle cx="24" cy="24" r="18" stroke="#c8a96e" stroke-width="1.2"/><circle cx="24" cy="24" r="8" stroke="#c8a96e" stroke-width="1" stroke-dasharray="3 3"/><circle cx="24" cy="24" r="2" fill="#c8a96e"/></svg></div>
+<h4>Безопасность — основа</h4>
+<p>Трансформация невозможна в страхе. Мы создаём пространство, где можно быть уязвимым — и это безопасно.</p>
+</div>
+<div class="card rv rv-d2">
+<div class="card-icon"><svg viewBox="0 0 48 48" fill="none" width="48" height="48"><path d="M8 40 C8 24 18 12 24 12 C30 12 40 24 40 40" stroke="#c8a96e" stroke-width="1.2" fill="none"/><circle cx="24" cy="12" r="4" stroke="#c8a96e" stroke-width="1.2"/><path d="M16 36 h16" stroke="#c8a96e" stroke-width="1" opacity=".4"/></svg></div>
+<h4>Действие важнее инсайта</h4>
+<p>Инсайт без действия — развлечение для ума. Наши программы встроены в реальную жизнь — чтобы изменения не остались «на тренинге».</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== NUMBERS ===== -->
+<section class="s">
+<div class="cw">
+<div class="label rv tc">Цифры</div>
+<h2 class="st rv tc">За каждой цифрой — <span class="accent">живой человек</span></h2>
+<div class="gl gl-c rv"></div>
+
+<div class="nums rv">
+<div class="num"><div class="num-v">10 000+</div><div class="num-l">человек прошли<br>программы</div></div>
+<div class="num"><div class="num-v">25+</div><div class="num-l">лет практического<br>опыта Ирины</div></div>
+<div class="num"><div class="num-v">15+</div><div class="num-l">лет в теме —<br>Алексей</div></div>
+<div class="num"><div class="num-v">ICF</div><div class="num-l">международный<br>стандарт коучинга</div></div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== LEADERS (DETAILED) ===== -->
+<section class="s leader-section" id="leaders" style="background:var(--bg2)">
+<div class="cw">
+<div class="label rv tc">Ведущие</div>
+<h2 class="st rv tc">Ирина и Алексей <span class="accent">Чижовы</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss rv tc" style="margin:0 auto 48px">Семейная пара, которая ведёт все модули вместе. Не мотивационные спикеры. Не инфобизнес. Мастера, которые создают пространство, где люди меняются.</p>
+
+<!-- IRINA -->
+<div class="leader-block rv" style="margin-bottom:28px">
+<h3>Ирина Чижова</h3>
+<div class="leader-role">Психолог · Сертифицированный коуч · Трансформационный тренер</div>
+<p class="leader-bio"><strong>Более 25 лет</strong> в работе с людьми. Педагогическое образование. В 90-е ушла в бизнес — но призвание вернуло к работе с людьми. Выбрала тему личностного роста и трансформации — <strong>ещё до того, как это стало мейнстримом</strong>.</p>
+<p class="leader-bio">Ирина создаёт то самое пространство, в котором люди впервые позволяют себе быть настоящими. Без масок, без ролей, без «правильных ответов». Именно в этом пространстве происходят самые глубокие изменения.</p>
+<div class="leader-stats">
+<div class="leader-stat"><div class="leader-stat-val">25+</div><div class="leader-stat-label">лет практики</div></div>
+<div class="leader-stat"><div class="leader-stat-val">10 000+</div><div class="leader-stat-label">участников</div></div>
+<div class="leader-stat"><div class="leader-stat-val">Психодрама</div><div class="leader-stat-label">основной метод</div></div>
+</div>
+<div class="leader-tags">
+<span class="leader-tag">Психолог</span>
+<span class="leader-tag">Коуч</span>
+<span class="leader-tag">Психодрама</span>
+<span class="leader-tag">Групповая динамика</span>
+<span class="leader-tag">Трансформационная работа</span>
+</div>
+</div>
+
+<!-- ALEXEY -->
+<div class="leader-block rv">
+<h3>Алексей Чижов</h3>
+<div class="leader-role">Сертифицированный коуч ICF · Предприниматель</div>
+<p class="leader-bio"><strong>Более 15 лет</strong> в теме личностного развития. Во время службы в армии увлёкся психологией. После — построил <strong>бизнес в автоиндустрии</strong>: продажа и обслуживание автомобилей и спецтехники.</p>
+<p class="leader-bio">При встрече с Ириной вернулся к психологии. Прошёл обучение, получил <strong>сертификацию ICF</strong> (международный стандарт коучинга). Вместе создали проект «Настоящие Отношения». Отдельно ведёт индивидуальный коучинг.</p>
+<p class="leader-bio">Алексей привносит в работу уникальное сочетание: <strong>предпринимательское мышление + глубокое понимание психологии</strong>. Он знает, как устроен реальный мир — и как трансформационная работа меняет результаты в бизнесе, деньгах и отношениях.</p>
+<div class="leader-stats">
+<div class="leader-stat"><div class="leader-stat-val">15+</div><div class="leader-stat-label">лет в теме</div></div>
+<div class="leader-stat"><div class="leader-stat-val">ICF</div><div class="leader-stat-label">сертификация</div></div>
+<div class="leader-stat"><div class="leader-stat-val">Коучинг</div><div class="leader-stat-label">индивидуальный</div></div>
+</div>
+<div class="leader-tags">
+<span class="leader-tag">Коуч ICF</span>
+<span class="leader-tag">Предприниматель</span>
+<span class="leader-tag">Индивидуальный коучинг</span>
+<span class="leader-tag">Бизнес + психология</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== METHOD ===== -->
+<section class="s" id="method">
+<div class="cwn">
+<div class="label rv tc">Метод</div>
+<h2 class="st rv tc">Как работает <span class="accent">трансформация</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss rv tc" style="margin:0 auto 40px">В основе — работа с внутренними сценариями через модель «событийного круга» и психодраму.</p>
+
+<div class="method-step rv">
+<div class="method-num">01</div>
+<div><h4>Событие в прошлом</h4><p>Чаще в детстве. Что-то произошло — и это вызвало сильную эмоцию: боль, страх, отвержение, стыд.</p></div>
+</div>
+<div class="method-step rv">
+<div class="method-num">02</div>
+<div><h4>Эмоция → Решение</h4><p>Ребёнок не может справиться с эмоцией — и принимает решение: «никому нельзя доверять», «я должен быть сильным», «любовь нужно заслужить».</p></div>
+</div>
+<div class="method-step rv">
+<div class="method-num">03</div>
+<div><h4>Решение → Сценарий</h4><p>Решение становится программой, которая управляет жизнью. Вы повторяете одни и те же паттерны — в отношениях, в работе, в контакте с собой.</p></div>
+</div>
+<div class="method-step rv">
+<div class="method-num">04</div>
+<div><h4>Осознание и новый выбор</h4><p>Через психодраму участник возвращается в ключевую ситуацию, перепроживает её, видит с новой позиции — и <strong>делает другой выбор</strong>. Сценарий меняется.</p></div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== PROGRAMS ===== -->
+<section class="s" id="programs" style="background:var(--bg2)">
+<div class="cw">
+<div class="label rv tc">Программа</div>
+<h2 class="st rv tc" style="color:var(--t)">«Создатель реальности» — <span class="accent">3 модуля</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss rv tc" style="margin:0 auto 48px">Каждый модуль — переход на новый уровень. Группа 10–20 человек. Живой формат. Москва, МО и Сочи. Перерывы между модулями: 3–5 недель.</p>
+
+<div class="g3 rv">
+<div class="prog">
+<div class="prog-label">Модуль 1 · 2,5 дня</div>
+<h3>Возвращение к себе</h3>
+<div class="prog-dur">Освобождение от сценариев</div>
+<ul>
+<li>Увидеть свои автоматические паттерны</li>
+<li>Осознать установки и убеждения из детства</li>
+<li>Первый контакт с собой без масок</li>
+<li>Выход из режима «автопилот»</li>
+</ul>
+<div class="prog-price">90 000 ₽<small>за модуль</small></div>
+</div>
+<div class="prog feat">
+<div class="prog-label">Модуль 2 · 5 дней</div>
+<h3>Внутренняя свобода</h3>
+<div class="prog-dur">Освобождение от состояний</div>
+<ul>
+<li>Работа со страхом, виной, обидой, тревогой</li>
+<li>Выход из зависимости от мнений</li>
+<li>Формирование внутренней опоры</li>
+<li>Состояние силы и ясности</li>
+</ul>
+<div class="prog-price">130 000 ₽<small>за модуль</small></div>
+</div>
+<div class="prog">
+<div class="prog-label">Модуль 3 · 3 месяца</div>
+<h3>Создатель реальности</h3>
+<div class="prog-dur">Интеграция в жизнь</div>
+<ul>
+<li>Видение и действие из намерения</li>
+<li>Командная работа и социальные проекты</li>
+<li>Ежедневные практики и обратная связь</li>
+<li>Новые действия → новые результаты</li>
+</ul>
+<div class="prog-price">270 000 ₽<small>за модуль</small></div>
+</div>
+</div>
+
+<p class="rv tc" style="margin-top:32px;font-size:.86rem;color:var(--t3);max-width:560px;margin-left:auto;margin-right:auto">Каждый модуль — самостоятельная ценность. Решение о продолжении — после каждого этапа. Это не подписка. Это путь, который вы выбираете сами.</p>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== PROCESS ===== -->
+<section class="s">
+<div class="cw">
+<div class="label rv tc">Как попасть</div>
+<h2 class="st rv tc">Четыре шага к <span class="accent">началу</span></h2>
+<div class="gl gl-c rv"></div>
+
+<div class="process-grid rv" style="margin-top:48px">
+<div class="process-step"><div class="process-num">01</div><h4>Заявка</h4><p>Оставьте заявку на бесплатную консультацию. Мы свяжемся в течение дня.</p></div>
+<div class="process-step"><div class="process-num">02</div><h4>Консультация</h4><p>30–40 минут. Знакомимся, разбираем ваш запрос, определяем — подходит ли формат.</p></div>
+<div class="process-step"><div class="process-num">03</div><h4>Модуль 1</h4><p>2,5 дня глубокой работы в малой группе. Первый контакт с собой настоящим.</p></div>
+<div class="process-step"><div class="process-num">04</div><h4>Путь</h4><p>Продолжаете через Модуль 2 и 3 — или интегрируете полученное в жизнь.</p></div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="s" id="reviews" style="background:var(--bg2)">
+<div class="cwn">
+<div class="label rv tc">Отзывы</div>
+<h2 class="st rv tc">Они перестали <span class="accent">повторять</span></h2>
+<div class="gl gl-c rv"></div>
+
+<div class="test rv">
+<p class="test-text">Я пришла, потому что подруга сказала — надо. Не ожидала ничего. Через месяц поняла, что впервые за 10 лет чувствую себя живой. Не потому что кто-то что-то объяснил — а потому что это пространство позволяет быть собой.</p>
+<div class="test-author">Ольга, 38 лет</div><div class="test-role">предприниматель</div>
+<div class="test-result">Впервые за 10 лет — живая</div>
+</div>
+<div class="test rv">
+<p class="test-text">У меня был успешный бизнес, квартира, машина — и полная пустота внутри. После второго этапа начал строить отношения с людьми по-другому. Не из головы, а из сердца. Это перевернуло всё.</p>
+<div class="test-author">Максим, 42 года</div><div class="test-role">руководитель</div>
+<div class="test-result">Из головы → в сердце</div>
+</div>
+<div class="test rv">
+<p class="test-text">Самое ценное — окружение. Люди, с которыми прошёл программу, стали ближе, чем друзья детства. Мы до сих пор общаемся, поддерживаем друг друга, строим проекты вместе.</p>
+<div class="test-author">Дмитрий, 35 лет</div><div class="test-role">IT-специалист</div>
+<div class="test-result">Окружение, которое держит</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== VENUE / ПЛОЩАДКА ===== -->
+<section class="s" id="venue">
+<div class="cw">
+<div class="label rv tc">Площадка</div>
+<h2 class="st rv tc">Где проходят <span class="accent">тренинги</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss rv tc" style="margin:0 auto 20px">Мы проводим программы в премиальных конференц-залах отеля рядом с&nbsp;аэропортом Шереметьево. Закрытое пространство, полное погружение, никаких отвлечений.</p>
+<p class="ss rv tc" style="margin:0 auto">Выездные программы — в Сочи. Совместные спортивные мероприятия — полумарафоны, забеги, командные челленджи.</p>
+
+<div class="venue-features rv" style="margin-top:48px">
+<div class="venue-feat">
+<svg viewBox="0 0 48 48" fill="none" width="48" height="48"><rect x="4" y="14" width="40" height="24" rx="4" stroke="#c8a96e" stroke-width="1.3"/><path d="M4 20h40" stroke="#c8a96e" stroke-width="1" opacity=".3"/><circle cx="24" cy="8" r="4" stroke="#c8a96e" stroke-width="1.2"/><path d="M12 28h8M28 28h8M12 34h24" stroke="#c8a96e" stroke-width="1" opacity=".4" stroke-linecap="round"/></svg>
+<h4>Премиальный отель</h4>
+<p>Конференц-залы отельного класса у&nbsp;Шереметьево. Просторные, светлые, с&nbsp;профессиональным оборудованием.</p>
+</div>
+<div class="venue-feat">
+<svg viewBox="0 0 48 48" fill="none" width="48" height="48"><circle cx="24" cy="24" r="18" stroke="#c8a96e" stroke-width="1.2"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6" stroke="#c8a96e" stroke-width="1" opacity=".3"/><circle cx="24" cy="24" r="6" stroke="#c8a96e" stroke-width="1.5"/><circle cx="24" cy="24" r="2" fill="#c8a96e" opacity=".5"/></svg>
+<h4>Полное погружение</h4>
+<p>2,5–5 дней без отвлечений. Участники живут в отеле, полностью погружаясь в процесс трансформации. Без телефонов и суеты.</p>
+</div>
+<div class="venue-feat">
+<svg viewBox="0 0 48 48" fill="none" width="48" height="48"><path d="M8 40 C8 24 16 12 24 12 C32 12 40 24 40 40" stroke="#c8a96e" stroke-width="1.3" fill="none"/><circle cx="24" cy="12" r="5" stroke="#c8a96e" stroke-width="1.2"/><path d="M16 32 Q24 24 32 32" stroke="#c8a96e" stroke-width="1" opacity=".4" fill="none"/><line x1="24" y1="18" x2="24" y2="28" stroke="#c8a96e" stroke-width="1"/></svg>
+<h4>Группа 10–20 человек</h4>
+<p>Камерный формат. В малой группе создаётся та глубина контакта, которая невозможна в зале на 500&nbsp;человек.</p>
+</div>
+</div>
+
+<!-- VENUE DETAILS -->
+<div class="g2 rv" style="margin-top:48px">
+<div>
+<h3 style="font-size:1.5rem;margin-bottom:12px;color:var(--t)">Атмосфера, в которой <span class="accent">происходит трансформация</span></h3>
+<p style="font-size:1rem;color:var(--t2);line-height:2;margin-bottom:16px">Современные конференц-залы с круглыми потолочными светильниками, мягким ковровым покрытием и профессиональным звуком. Кресла расставляются кругом — никаких «зрителей», все участники.</p>
+<p style="font-size:1rem;color:var(--t2);line-height:2;margin-bottom:16px">Между модулями — совместные обеды, прогулки, неформальное общение. Многие участники говорят, что <strong style="color:var(--gl)">именно за обедом происходят самые важные разговоры</strong>.</p>
+<p style="font-size:1rem;color:var(--t2);line-height:2">А выездные мероприятия — полумарафоны в Сочи и Зеленограде, командные забеги — показывают, что трансформация выходит за&nbsp;пределы зала. <strong style="color:var(--gl)">Это сообщество, которое живёт вместе.</strong></p>
+</div>
+<div>
+<!-- Mini preview grid -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border-radius:var(--rl);overflow:hidden">
+<img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-09.jpg" alt="Конференц-зал тренинга" style="width:100%;height:160px;object-fit:cover" loading="lazy">
+<img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-24.jpg" alt="Группа на тренинге" style="width:100%;height:160px;object-fit:cover" loading="lazy">
+<img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-13-50.jpg" alt="Совместный обед" style="width:100%;height:160px;object-fit:cover" loading="lazy">
+<img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-04.jpg" alt="Сертификаты" style="width:100%;height:160px;object-fit:cover" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<section class="s" id="gallery" style="background:var(--bg2);overflow:hidden">
+<div class="cw">
+<div class="label rv tc">Галерея</div>
+<h2 class="st rv tc">Как это <span class="accent">выглядит</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss rv tc" style="margin:0 auto 40px">Реальные фото с тренингов. Москва, Сочи, выездные мероприятия. Живые лица, настоящие эмоции.</p>
+</div>
+
+<!-- INFINITE SCROLL GALLERY -->
+<div style="overflow:hidden;padding:20px 0">
+<div class="gallery-auto" id="galleryTrack">
+<!-- Row 1 -->
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-28.jpg" alt="Тренинг" loading="lazy"><div class="gallery-caption">Конференц-зал · Москва</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-41.jpg" alt="Группа" loading="lazy"><div class="gallery-caption">Завершение модуля</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-13-06.jpg" alt="Сертификаты" loading="lazy"><div class="gallery-caption">Выпуск · Сертификаты</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-36.jpg" alt="Полумарафон" loading="lazy"><div class="gallery-caption">Зеленоградский полумарафон</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-13-55.jpg" alt="Зал тренинга" loading="lazy"><div class="gallery-caption">Рабочий зал · Москва</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-13.jpg" alt="Выпуск" loading="lazy"><div class="gallery-caption">Выпускной вечер</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-00.jpg" alt="Зимний тренинг" loading="lazy"><div class="gallery-caption">Зимний модуль · МО</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-19.jpg" alt="Сочи" loading="lazy"><div class="gallery-caption">Sirius Autodrom · Сочи</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-32.jpg" alt="Группа" loading="lazy"><div class="gallery-caption">Командный дух</div></div>
+<!-- Duplicate for infinite scroll -->
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-28.jpg" alt="Тренинг" loading="lazy"><div class="gallery-caption">Конференц-зал · Москва</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-41.jpg" alt="Группа" loading="lazy"><div class="gallery-caption">Завершение модуля</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-13-06.jpg" alt="Сертификаты" loading="lazy"><div class="gallery-caption">Выпуск · Сертификаты</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-14-36.jpg" alt="Полумарафон" loading="lazy"><div class="gallery-caption">Зеленоградский полумарафон</div></div>
+<div class="gallery-item"><img src="https://raw.githubusercontent.com/thebodymindcode/real-relationships/main/photo_2026-03-23_07-13-55.jpg" alt="Зал тренинга" loading="lazy"><div class="gallery-caption">Рабочий зал · Москва</div></div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== FAQ ===== -->
+<section class="s" id="faq">
+<div class="cwn">
+<div class="label rv tc">Вопросы</div>
+<h2 class="st rv tc">Частые <span class="accent">вопросы</span></h2>
+<div class="gl gl-c rv"></div>
+
+<div style="margin-top:40px">
+<details class="faq rv"><summary>Это психотерапия?</summary><div class="faq-body">Нет. Это трансформационная групповая работа. Мы не лечим — мы создаём пространство, в котором человек находит контакт с собой и с другими. Если нужна клиническая помощь — порекомендуем специалиста.</div></details>
+<details class="faq rv"><summary>Обязательно проходить все три модуля?</summary><div class="faq-body">Нет. Каждый модуль — самостоятельная ценность. Но самые глубокие результаты — у тех, кто проходит путь полностью. Решение о продолжении — после каждого модуля.</div></details>
+<details class="faq rv"><summary>Это только для пар?</summary><div class="faq-body">Нет. «Настоящие отношения» — про отношения в широком смысле: с собой, с людьми, с реальностью. Приходят и одиночки, и пары. 30–50 лет, пол не имеет значения.</div></details>
+<details class="faq rv"><summary>Чем отличается от обычных тренингов?</summary><div class="faq-body">Тренинг — это знания. Наша программа — проживание. Через психодраму, групповую динамику и живой контакт вы не просто понимаете сценарии, а меняете их. Разница — как между книгой о плавании и самим плаванием.</div></details>
+<details class="faq rv"><summary>Как попасть?</summary><div class="faq-body">Через бесплатную консультацию. 30–40 минут. Знакомимся, разбираем ваш запрос. Без давления, без продаж.</div></details>
+<details class="faq rv"><summary>Можно пройти онлайн?</summary><div class="faq-body">Нет. Формат исключительно живой. Трансформация происходит в контакте с реальными людьми в реальном пространстве. Это принципиальная позиция — и именно поэтому результаты глубокие.</div></details>
+<details class="faq rv"><summary>Где проходят встречи?</summary><div class="faq-body">Москва и Московская область — основная площадка. Также проводим выездные программы в Сочи. Группа до 20 человек.</div></details>
+<details class="faq rv"><summary>Это подходит интровертам?</summary><div class="faq-body">Да. Каждый проявляется в своём темпе. Никакого давления. Именно интроверты часто получают самые мощные результаты — потому что впервые оказываются в среде, где их слышат.</div></details>
+</div>
+</div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final" id="final">
+<div class="cw rv">
+<div class="label" style="margin-bottom:16px">Первый шаг</div>
+<h2>Готовы к <em>настоящему?</em></h2>
+<p class="final-text">Бесплатная консультация. 30–40 минут. Без давления. Познакомимся, разберём ваш запрос и поймём, подходит ли вам формат.</p>
+<a href="https://wa.me/" class="btn btn-pulse"><span>Записаться на бесплатную консультацию</span></a>
+<p class="final-ps">Вы ничем не рискуете. Но можете изменить всё.</p>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="cw">
+<div class="footer-inner">
+<!-- BRAND -->
+<div class="footer-brand">
+<svg viewBox="0 0 32 32" fill="none" width="24" height="24"><circle cx="16" cy="16" r="14" stroke="#c8a96e" stroke-width="1.2"/><path d="M10 16 Q16 7 22 16 Q16 25 10 16Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="16" cy="16" r="2.5" fill="#c8a96e" opacity=".4"/></svg>
+Настоящие Отношения
+</div>
+
+<!-- SOCIAL ICONS (CUSTOM SVG) -->
+<div class="footer-socials">
+<!-- Instagram -->
+<a href="https://instagram.com/chizhovy.ru" target="_blank" class="footer-social" title="Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="2" width="20" height="20" rx="5"/>
+<circle cx="12" cy="12" r="5"/>
+<circle cx="17.5" cy="6.5" r="1.5" fill="#c8a96e" stroke="none"/>
+</svg>
+</a>
+<!-- YouTube -->
+<a href="https://youtube.com/@ChizhovyRu" target="_blank" class="footer-social" title="YouTube">
+<svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+<polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#c8a96e" stroke="none"/>
+</svg>
+</a>
+<!-- Telegram -->
+<a href="#" class="footer-social" title="Telegram">
+<svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21.2 4.4L2.4 10.6c-.6.2-.6 1.1 0 1.3l4.4 1.6 1.6 5.1c.1.4.6.6 1 .3l2.3-1.9 4.5 3.3c.4.3 1 .1 1.1-.4L21.8 5.4c.2-.6-.3-1.1-.6-1z"/>
+<path d="M8.4 13.5l8.3-5.8"/>
+</svg>
+</a>
+<!-- WhatsApp -->
+<a href="https://wa.me/" class="footer-social" title="WhatsApp">
+<svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+</svg>
+</a>
+</div>
+
+<!-- LEGAL -->
+<div class="footer-legal">
+© 2026 Настоящие Отношения. Ирина и Алексей Чижовы.<br>
+Данная страница носит информационный характер и не является публичной офертой.<br>
+<a href="#">Политика конфиденциальности</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="sticky" id="stickyCta">
+<a href="#final" class="btn"><span>Записаться бесплатно</span></a>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>80));
+
+// Reveal on scroll (cinematic timing)
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})
+},{threshold:.05,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',e=>{
+e.preventDefault();
+const t=document.querySelector(a.getAttribute('href'));
+if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+
+// FAQ auto-close
+document.querySelectorAll('details.faq').forEach(d=>{
+d.addEventListener('toggle',()=>{
+if(d.open)document.querySelectorAll('details.faq').forEach(o=>{if(o!==d)o.open=false});
+});
+});
+
+// Sticky CTA hide near final section
+const finalEl=document.getElementById('final');
+const stickyEl=document.getElementById('stickyCta');
+if(finalEl&&stickyEl){
+const sObs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+stickyEl.style.opacity=e.isIntersecting?'0':'1';
+stickyEl.style.pointerEvents=e.isIntersecting?'none':'auto';
+});
+},{threshold:.2});
+sObs.observe(finalEl);
+}
+
+// Parallax hero lines
+const lines=document.querySelectorAll('.hero-line');
+window.addEventListener('scroll',()=>{
+const s=window.scrollY;
+lines.forEach((l,i)=>{l.style.transform=`translateY(${s*(0.3+i*0.08)}px)`});
+});
+
+// ===== SCROLL PROGRESS BAR =====
+const progressBar=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+const h=document.documentElement.scrollHeight-window.innerHeight;
+const p=(window.scrollY/h)*100;
+progressBar.style.width=p+'%';
+});
+
+// ===== GOLD PARTICLE SYSTEM =====
+(function(){
+const canvas=document.getElementById('particles');
+if(!canvas)return;
+const ctx=canvas.getContext('2d');
+let w,h,particles=[];
+function resize(){w=canvas.width=canvas.offsetWidth;h=canvas.height=canvas.offsetHeight}
+window.addEventListener('resize',resize);
+resize();
+class Particle{
+constructor(){this.reset()}
+reset(){
+this.x=Math.random()*w;
+this.y=Math.random()*h;
+this.size=Math.random()*2+0.5;
+this.speedX=(Math.random()-0.5)*0.3;
+this.speedY=(Math.random()-0.5)*0.3;
+this.opacity=Math.random()*0.4+0.1;
+this.fadeDir=Math.random()>0.5?1:-1;
+}
+update(){
+this.x+=this.speedX;
+this.y+=this.speedY;
+this.opacity+=this.fadeDir*0.003;
+if(this.opacity>0.5)this.fadeDir=-1;
+if(this.opacity<0.05)this.fadeDir=1;
+if(this.x<0||this.x>w||this.y<0||this.y>h)this.reset();
+}
+draw(){
+ctx.beginPath();
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+ctx.fillStyle=`rgba(200,169,110,${this.opacity})`;
+ctx.fill();
+}
+}
+for(let i=0;i<60;i++)particles.push(new Particle());
+function animate(){
+ctx.clearRect(0,0,w,h);
+// Draw connection lines between close particles
+for(let i=0;i<particles.length;i++){
+for(let j=i+1;j<particles.length;j++){
+const dx=particles[i].x-particles[j].x;
+const dy=particles[i].y-particles[j].y;
+const dist=Math.sqrt(dx*dx+dy*dy);
+if(dist<120){
+ctx.beginPath();
+ctx.moveTo(particles[i].x,particles[i].y);
+ctx.lineTo(particles[j].x,particles[j].y);
+ctx.strokeStyle=`rgba(200,169,110,${0.06*(1-dist/120)})`;
+ctx.lineWidth=0.5;
+ctx.stroke();
+}
+}
+}
+particles.forEach(p=>{p.update();p.draw()});
+requestAnimationFrame(animate);
+}
+// Only animate when hero is visible
+const heroSection=document.querySelector('.hero');
+let animating=false;
+const pObs=new IntersectionObserver(entries=>{
+if(entries[0].isIntersecting&&!animating){animating=true;animate()}
+},{threshold:0.1});
+pObs.observe(heroSection);
+})();
+</script>
+</body>
+</html>
