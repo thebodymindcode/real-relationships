@@ -177,6 +177,28 @@ border:1px solid var(--b);
 .dv{height:1px;background:linear-gradient(90deg,transparent 5%,var(--b) 50%,transparent 95%)}
 
 /* ============================= */
+/* === PROBLEM/PAIN CARDS === */
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+.prob-card{padding:28px;border-radius:var(--r);background:rgba(200,169,110,.03);border:1px solid rgba(200,169,110,.08);transition:all .4s}
+.prob-card:hover{background:rgba(200,169,110,.06);border-color:rgba(200,169,110,.15)}
+.prob-icon{margin-bottom:14px;width:44px;height:44px}
+.prob-card h4{font-size:1.1rem;margin-bottom:6px;font-weight:500;color:var(--t)}
+.prob-card p{font-size:.86rem;color:var(--t2);line-height:1.7}
+/* TRANSFORM GRID */
+.tf-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:start;margin-top:40px}
+.tf-col h4{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;font-family:'Nunito Sans',sans-serif;font-weight:700;margin-bottom:16px}
+.tf-col.before h4{color:var(--t3)}
+.tf-col.after h4{color:var(--gold)}
+.tf-item{padding:12px 16px;border-radius:10px;font-size:.9rem;margin-bottom:8px;line-height:1.5}
+.before .tf-item{background:rgba(255,255,255,.04);color:var(--t2)}
+.after .tf-item{background:var(--gp);color:var(--gl);font-weight:500}
+.tf-arrow{display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--gold);padding-top:40px}
+/* WHO CARDS */
+.who-card{text-align:center;padding:28px 20px;border-radius:var(--rl);background:rgba(200,169,110,.03);border:1px solid rgba(200,169,110,.08)}
+.who-card svg{margin:0 auto 14px}
+.who-card h4{font-size:1rem;margin-bottom:6px;color:var(--t)}
+.who-card p{font-size:.84rem;color:var(--t2);line-height:1.7}
+
 /* ====== ABOUT SECTION ======== */
 /* ============================= */
 .about-text{font-size:1.15rem;color:var(--t2);line-height:2.1;margin-bottom:24px}
@@ -462,6 +484,9 @@ width:0;transition:width .1s linear;
 .process-step::after{display:none}
 .process-grid{grid-template-columns:1fr 1fr}
 .nav-links{display:none}
+.prob-grid,.tf-grid{grid-template-columns:1fr}
+.tf-arrow{padding:0;font-size:1.5rem;transform:rotate(90deg)}
+.venue-features{grid-template-columns:1fr}
 }
 @media(max-width:640px){
 .g3,.process-grid{grid-template-columns:1fr}
@@ -562,6 +587,166 @@ body{padding-bottom:72px}
 </div>
 </div>
 </section>
+
+<div class="dv"></div>
+
+<!-- ===== PAIN / PROBLEM ===== -->
+<section class="s" style="background:var(--bg2)">
+<div class="cw">
+<div class="tc rv">
+<div class="label">Знакомо?</div>
+<h2 class="st">Снаружи всё хорошо.<br>Внутри — <span class="accent">пустота.</span></h2>
+<div class="gl gl-c rv"></div>
+<p class="ss" style="margin:0 auto">Вы достигли многого. Бизнес, карьера, семья. Но вместо наполненности чувствуете усталость, тревогу и ощущение, что живёте не свою жизнь.</p>
+</div>
+<div class="prob-grid" style="margin-top:48px">
+<div class="prob-card rv">
+<svg class="prob-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" stroke="#c8a96e" stroke-width="1.2" stroke-dasharray="4 3"/><path d="M22 12v10l6 4" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round"/></svg>
+<h4>Повторяющиеся сценарии</h4>
+<p>Одни и те же конфликты, одни и те же ошибки в отношениях. Вы понимаете, что что-то не так — но не можете это изменить.</p>
+</div>
+<div class="prob-card rv rv-d1">
+<svg class="prob-icon" viewBox="0 0 44 44" fill="none"><rect x="4" y="4" width="36" height="36" rx="8" stroke="#c8a96e" stroke-width="1.2"/><path d="M14 22h16M22 14v16" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" opacity=".4"/><circle cx="22" cy="22" r="4" stroke="#c8a96e" stroke-width="1.5"/></svg>
+<h4>Контроль вместо близости</h4>
+<p>Вы привыкли всё контролировать. Но в отношениях это не работает — и вы чувствуете себя одиноким даже рядом с людьми.</p>
+</div>
+<div class="prob-card rv rv-d2">
+<svg class="prob-icon" viewBox="0 0 44 44" fill="none"><path d="M8 36c4-16 12-24 28-28" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="36" cy="8" r="4" stroke="#c8a96e" stroke-width="1.2"/><circle cx="8" cy="36" r="4" fill="#c8a96e" opacity=".2" stroke="#c8a96e" stroke-width="1.2"/></svg>
+<h4>«Я всё понимаю, но ничего не меняется»</h4>
+<p>Книги, терапия, курсы — вы всё перепробовали. Знаний много, а результата нет. Потому что знать и прожить — не одно и то же.</p>
+</div>
+<div class="prob-card rv rv-d3">
+<svg class="prob-icon" viewBox="0 0 44 44" fill="none"><path d="M6 22C6 22 14 8 22 8s16 14 16 14-8 14-16 14S6 22 6 22z" stroke="#c8a96e" stroke-width="1.2"/><circle cx="22" cy="22" r="5" stroke="#c8a96e" stroke-width="1.5"/><line x1="4" y1="4" x2="40" y2="40" stroke="#c8a96e" stroke-width="1" opacity=".3"/></svg>
+<h4>Потеря себя</h4>
+<p>Вы живёте из ролей — сильный, успешный, надёжный. Но кто вы без этих масок? Внутри — тревога и пустота, в которую страшно заглянуть.</p>
+</div>
+</div>
+<div class="tc rv rv-d4" style="margin-top:48px">
+<p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--t2);max-width:580px;margin:0 auto">
+Это не вопрос дисциплины или силы воли.<br>Это вопрос <strong style="color:var(--gold)">внутренних сценариев</strong>, которые управляют вашей жизнью.<br>И их можно изменить.</p>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== METHOD with SVG ===== -->
+<section class="s" style="background:var(--bg)">
+<div class="cw">
+<div class="g2">
+<div class="rv">
+<div class="label">Наш подход</div>
+<h2 class="st">Событийный круг:<br>как формируются <span class="accent">сценарии</span></h2>
+<div class="gl"></div>
+<p class="ss" style="margin-bottom:24px">В основе всех повторяющихся проблем лежит один механизм. Событие в прошлом вызвало эмоцию. Эмоция породила решение. Решение стало сценарием, который повторяется всю жизнь.</p>
+<p class="ss" style="margin-bottom:24px">Через глубокие процессы — включая психодраму — участник возвращается в ключевые ситуации, перепроживает их, видит с новой позиции и <strong style="color:var(--gl)">меняет принятые решения</strong>.</p>
+<p class="ss">Это не разговоры о проблемах. Это работа с корнем — через тело, эмоции и живой контакт в группе.</p>
+</div>
+<div class="rv rv-d2">
+<svg viewBox="0 0 400 400" fill="none" style="width:100%;max-width:400px;margin:0 auto;display:block">
+<circle cx="200" cy="200" r="170" stroke="rgba(200,169,110,.12)" stroke-width="1" stroke-dasharray="8 4"/>
+<circle cx="200" cy="200" r="120" fill="url(#glow1)" opacity=".5"/>
+<circle cx="200" cy="40" r="32" fill="rgba(200,169,110,.08)" stroke="#c8a96e" stroke-width="1.5"><animate attributeName="r" values="32;35;32" dur="4s" repeatCount="indefinite"/></circle>
+<text x="200" y="36" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#c8a96e" font-weight="600">СОБЫТИЕ</text>
+<text x="200" y="50" text-anchor="middle" font-family="Nunito Sans" font-size="8" fill="rgba(255,255,255,.4)">чаще в детстве</text>
+<path d="M228 56 Q310 80 356 160" stroke="#c8a96e" stroke-width="1" fill="none" opacity=".4" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="3s" repeatCount="indefinite"/></path>
+<circle cx="360" cy="200" r="32" fill="rgba(200,169,110,.08)" stroke="#c8a96e" stroke-width="1.5"><animate attributeName="r" values="32;35;32" dur="4s" begin="1s" repeatCount="indefinite"/></circle>
+<text x="360" y="196" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#c8a96e" font-weight="600">ЭМОЦИЯ</text>
+<text x="360" y="210" text-anchor="middle" font-family="Nunito Sans" font-size="8" fill="rgba(255,255,255,.4)">страх, боль, вина</text>
+<path d="M356 236 Q310 320 228 348" stroke="#c8a96e" stroke-width="1" fill="none" opacity=".4" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="3s" begin=".5s" repeatCount="indefinite"/></path>
+<circle cx="200" cy="360" r="32" fill="rgba(200,169,110,.08)" stroke="#c8a96e" stroke-width="1.5"><animate attributeName="r" values="32;35;32" dur="4s" begin="2s" repeatCount="indefinite"/></circle>
+<text x="200" y="356" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#c8a96e" font-weight="600">РЕШЕНИЕ</text>
+<text x="200" y="370" text-anchor="middle" font-family="Nunito Sans" font-size="8" fill="rgba(255,255,255,.4)">«никому нельзя доверять»</text>
+<path d="M172 348 Q90 320 44 236" stroke="#c8a96e" stroke-width="1" fill="none" opacity=".4" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
+<circle cx="40" cy="200" r="32" fill="rgba(200,169,110,.15)" stroke="#c8a96e" stroke-width="2"><animate attributeName="r" values="32;36;32" dur="4s" begin="3s" repeatCount="indefinite"/></circle>
+<text x="40" y="196" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#c8a96e" font-weight="700">СЦЕНАРИЙ</text>
+<text x="40" y="210" text-anchor="middle" font-family="Nunito Sans" font-size="8" fill="rgba(255,255,255,.5)">повторяется в жизни</text>
+<path d="M44 164 Q90 80 172 52" stroke="#c8a96e" stroke-width="1" fill="none" opacity=".4" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-20" dur="3s" begin="2.5s" repeatCount="indefinite"/></path>
+<text x="200" y="192" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#c8a96e" font-weight="600" font-style="italic">Мы работаем</text>
+<text x="200" y="212" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" fill="#c8a96e" font-weight="600" font-style="italic">здесь</text>
+<circle cx="200" cy="200" r="44" stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-dasharray="4 2" opacity=".6"><animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="30s" repeatCount="indefinite"/></circle>
+<defs><radialGradient id="glow1" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(200,169,110,.06)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+</svg>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== TRANSFORMATION ===== -->
+<section class="s" style="background:var(--bg2)">
+<div class="cw">
+<div class="tc rv">
+<div class="label">Результат</div>
+<h2 class="st">Что меняется <span class="accent">после программы</span></h2>
+<div class="gl gl-c rv"></div>
+</div>
+<div class="tf-grid rv rv-d1">
+<div class="tf-col before"><h4>До программы</h4>
+<div class="tf-item">Реагирую на жизнь автоматически</div>
+<div class="tf-item">Повторяю одни и те же ошибки</div>
+<div class="tf-item">Контролирую, потому что боюсь</div>
+<div class="tf-item">Живу из головы, не чувствую</div>
+<div class="tf-item">Рядом с людьми — одинок</div>
+<div class="tf-item">«Всё понимаю, но ничего не меняется»</div>
+</div>
+<div class="tf-arrow">→</div>
+<div class="tf-col after"><h4>После программы</h4>
+<div class="tf-item">Осознанно выбираю свои действия</div>
+<div class="tf-item">Вижу и меняю свои сценарии</div>
+<div class="tf-item">Доверяю — себе и другим</div>
+<div class="tf-item">Чувствую, проживаю, живу</div>
+<div class="tf-item">Строю глубокие связи с людьми</div>
+<div class="tf-item">Действую из намерения → получаю результат</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== FOR WHO ===== -->
+<section class="s" style="background:var(--bg)">
+<div class="cw">
+<div class="tc rv">
+<div class="label">Для кого</div>
+<h2 class="st">Если вы узнали себя — <span class="accent">это для вас</span></h2>
+<div class="gl gl-c rv"></div>
+</div>
+<div class="g3" style="margin-top:40px">
+<div class="who-card rv"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><circle cx="24" cy="14" r="8" stroke="#c8a96e" stroke-width="1.5"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14" stroke="#c8a96e" stroke-width="1.5"/><path d="M32 8l4-4M36 12l4 0M32 16l4 4" stroke="#c8a96e" stroke-width="1" opacity=".5"/></svg><h4>Предприниматели и руководители</h4><p>Высокая нагрузка, невозможность «выключить голову». Сильные снаружи, в тупике внутри.</p></div>
+<div class="who-card rv rv-d1"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><circle cx="24" cy="24" r="16" stroke="#c8a96e" stroke-width="1.5"/><path d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#c8a96e" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="#c8a96e" opacity=".3"/></svg><h4>Те, кто устал от повторений</h4><p>Одни и те же грабли в отношениях, деньгах, решениях. Много пробовали — ничего не сработало по-настоящему.</p></div>
+<div class="who-card rv rv-d2"><svg viewBox="0 0 48 48" fill="none" width="44" height="44"><path d="M12 36 Q24 20 36 36" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="24" cy="16" r="6" stroke="#c8a96e" stroke-width="1.5"/><line x1="24" y1="22" x2="24" y2="30" stroke="#c8a96e" stroke-width="1.5"/></svg><h4>Пары, которые хотят большего</h4><p>Не развод, а новый уровень. Совместное прохождение углубляет понимание и убирает старые конфликты.</p></div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
+
+<!-- ===== NOT FOR EVERYONE ===== -->
+<section class="s" style="background:var(--bg2)">
+<div class="cw">
+<div class="g2">
+<div class="rv">
+<div class="label">Честно</div>
+<h2 class="st">Это <span class="accent">не для всех</span></h2>
+<div class="gl"></div>
+<p style="font-size:1rem;color:var(--t2);line-height:1.9;margin-bottom:20px">Мы не про «успешный успех». Не про «казаться». Не про быстрые решения и не про «погладить по голове».</p>
+<p style="font-size:1rem;color:var(--t2);line-height:1.9">Мы про ответственность, честность и реальные изменения. Это требует готовности идти в неприятную правду о себе.</p>
+</div>
+<div class="rv rv-d2">
+<div style="background:rgba(200,169,110,.04);border:1px solid rgba(200,169,110,.1);border-radius:var(--rl);padding:32px">
+<p style="font-size:.88rem;color:var(--t2);line-height:1.8;margin-bottom:20px"><strong style="color:var(--gl)">Что требуется от участника:</strong></p>
+<p style="font-size:.86rem;color:var(--t3);line-height:2">→ Честность с собой<br>→ Готовность к обратной связи<br>→ Отказ от позиции «я и так всё знаю»<br>→ Включённость в процесс<br>→ Готовность менять действия, а не только понимать</p>
+<p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--gl);margin-top:20px;line-height:1.6">Это не про «послушать».<br>Это про изменить жизнь.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="dv"></div>
 
 <!-- ============================================== -->
 <!-- ===== CINEMATIC SVG ANIMATION SECTION ======== -->
